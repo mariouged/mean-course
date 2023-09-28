@@ -32,13 +32,12 @@ function printResult(primes) {
   })
 }
 
-function primesNumbers() {
+function primesNumbers(from = 100) {
   print('-- Prime numbers --')
-  const from = 100
   print(`from ${from}`)
   const primes = calculatePrimes(from)
   printResult(primes)
   print('-- End --')
 }
 
-primesNumbers()
+primesNumbers(50)
