@@ -1,12 +1,12 @@
 /**
  * Print primes numbers from a number until 1
  */
-function print(str) {
+function print (str) {
   console.log(str)
 }
 
-function isPrime(num) {
-  for(let i = num - 1; i > 1; i--) {
+function isPrime (num) {
+  for (let i = num - 1; i > 1; i--) {
     if (num % i === 0) {
       return false
     }
@@ -15,9 +15,9 @@ function isPrime(num) {
   return true
 }
 
-function calculatePrimes(fromNum) {
+function calculatePrimes (fromNum) {
   const primes = []
-  for(let i = fromNum; i > 0; i--) {
+  for (let i = fromNum; i > 0; i--) {
     if (isPrime(i)) {
       primes.push(i)
     }
@@ -26,13 +26,13 @@ function calculatePrimes(fromNum) {
   return primes
 }
 
-function printResult(primes) {
+function printResult (primes) {
   primes.forEach(num => {
     print(`${num}`)
   })
 }
 
-function primesNumbers(from = 100) {
+function primesNumbers (from = 100) {
   print('-- Prime numbers --')
   print(`from ${from}`)
   const primes = calculatePrimes(from)
